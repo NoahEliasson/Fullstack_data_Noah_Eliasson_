@@ -1,0 +1,11 @@
+,emp_id,name,age,salary,department
+0,0,Alice,32,31000,HR
+1,1,Bob,38,41000,IT
+2,2,Charlie,22,28000,Sales
+3,3,David,45,50000,Management
+4,4,Eva,29,34000,HR
+5,5,Frank,41,46000,IT
+6,6,Grace,25,30000,Sales
+7,7,Hank,35,42000,IT
+8,8,Ivy,28,33000,Marketing
+9,9,Jack,50,55000,Management
