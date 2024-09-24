@@ -170,3 +170,6 @@ cython_debug/
 
 # duckdb
 *.wal
+
+# dataset yt
+social_media_yt.csv
