@@ -14,3 +14,4 @@ class ViewsTrend:
 
 # create more graphs here
 
+
