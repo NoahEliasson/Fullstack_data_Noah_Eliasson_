@@ -1,7 +1,8 @@
+import sys
+sys.path.insert(0, "C:/Users/Noah7/Desktop/Code/fullstack_data_test/Fullstack_data_Noah_Eliasson_/lab/10_lab_overview/frontend" )
 import streamlit as st 
-from frontend.kpi import ContentKPI
-from frontend.graphs import ViewsTrend
-
+from kpi import ContentKPI
+from graphs import ViewsTrend
 
 # device_kpi = DeviceKPI()
 content_kpi = ContentKPI()

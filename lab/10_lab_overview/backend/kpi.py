@@ -1,5 +1,5 @@
 import streamlit as st
-from utils.query_database import QueryDatabase
+from query_database import QueryDatabase
 
 class ContentKPI:
     def __init__(self) -> None:

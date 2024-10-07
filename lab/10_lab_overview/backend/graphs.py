@@ -1,6 +1,6 @@
-from utils.query_database import QueryDatabase
 import plotly.express as px
 import streamlit as st 
+from query_database import QueryDatabase
 
 class ViewsTrend:
     def __init__(self) -> None:
