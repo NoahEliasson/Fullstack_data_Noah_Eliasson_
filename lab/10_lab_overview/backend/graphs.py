@@ -15,4 +15,10 @@ class ViewsTrend:
 
 # create more graphs here
 
+class ViewOS:
+    def __init__(self) -> None:
+        self.df = QueryDatabase("SELECT * FROM marts.operationsystem_view;").df
 
+    def display_os_plot(self): 
+        fig = px.bar(self.df, x="Operativsystem", y="total_visningar")
+        st.plotly_chart(fig)

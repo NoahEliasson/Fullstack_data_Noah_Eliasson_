@@ -8,7 +8,6 @@ from graphs import ViewsTrend
 # device_kpi = DeviceKPI()
 content_kpi = ContentKPI()
 views_graph = ViewsTrend()
-
 st.set_page_config(page_title="YouTube Data Dashboard", page_icon=":bar_chart:", layout="wide")
 st.sidebar.success("Select a page above.")
 
@@ -20,6 +19,5 @@ def layout():
     # device_kpi.display_device_summary()
     content_kpi.display_content()
     views_graph.display_plot()
-
 if __name__ == "__main__":
     layout()

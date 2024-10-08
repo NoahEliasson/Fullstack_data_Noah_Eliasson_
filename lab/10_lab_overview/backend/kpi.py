@@ -23,6 +23,19 @@ class ContentKPI:
                 st.metric(kpi, round(kpis[kpi]))
         st.dataframe(df)
 
-# create more KPIs here
+# os kpi not device change"!!! #####
 class DeviceKPI:
-    pass 
+    def __init__(self) -> None:
+        self._content = QueryDatabase("SELECT * FROM marts.operationsystem_view;").df
+
+    def display_content(self):
+        df = self._content
+        st.markdown("Nedan visas KPIer för totalt antal")
+        
+        kpis = {
+            "olika operativsystem": len(df),
+        }
+        for col, kpi in zip(st.columns(len(kpis)), kpis):
+            with col: 
+                st.metric(kpi, round(kpis[kpi]))
+        st.dataframe(df)
