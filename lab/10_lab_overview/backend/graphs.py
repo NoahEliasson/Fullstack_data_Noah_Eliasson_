@@ -1,5 +1,6 @@
 import plotly.express as px
 import streamlit as st 
+# from utils
 from query_database import QueryDatabase
 
 class ViewsTrend:
