@@ -23,14 +23,36 @@ class ContentKPI:
                 st.metric(kpi, round(kpis[kpi]))
         st.dataframe(df)
 
-# os kpi not device change"!!! #####
 class DeviceKPI:
+    def __init__(self) -> None:
+        self._content = QueryDatabase("SELECT * FROM marts.device_summary").df
+
+    def display_content(self):
+        df = self._content
+        st.markdown("## KPIer för enhetsinformation")
+        df = df.iloc[1:].reset_index(drop=True)
+
+        # Calculate metrics
+        kpis = {
+            "Totala enheter": len(df),
+            "Unika enhetstyper": df["Enhetstyp"].nunique()  # Count of unique device types
+        }
+
+        # Display metrics in columns
+        for col, kpi in zip(st.columns(len(kpis)), kpis):
+            with col:
+                st.metric(kpi, kpis[kpi]) 
+
+        st.dataframe(df)
+
+class OSKPI:
     def __init__(self) -> None:
         self._content = QueryDatabase("SELECT * FROM marts.operationsystem_view;").df
 
     def display_content(self):
         df = self._content
         st.markdown("Nedan visas KPIer för totalt antal")
+
         
         kpis = {
             "olika operativsystem": len(df),

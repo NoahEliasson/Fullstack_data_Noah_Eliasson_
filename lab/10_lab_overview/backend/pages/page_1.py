@@ -1,7 +1,7 @@
 import streamlit as st 
 from graphs import ViewOS
-from kpi import DeviceKPI
-os_kpi = DeviceKPI()
+from kpi import OSKPI
+os_kpi = OSKPI()
 os_graph = ViewOS()
 def layout():
     st.title("visningar per operativ system")
