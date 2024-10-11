@@ -61,3 +61,19 @@ class OSKPI:
             with col: 
                 st.metric(kpi, round(kpis[kpi]))
         st.dataframe(df)
+
+
+class GenderKPI:
+    def __init__(self) -> None:
+        self._content = QueryDatabase("SELECT * FROM marts.gender_age").df
+
+    def display_content(self):
+        df = self._content
+
+        kpis = {
+            "kön antal": len(df),
+        }
+        for col, kpi in zip(st.columns(len(kpis)), kpis):
+            with col: 
+                st.metric(kpi, round(kpis[kpi]))
+        st.dataframe(df)
