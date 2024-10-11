@@ -3,7 +3,12 @@ from frontend.kpi import ContentKPI
 from frontend.graphs import ViewsTrend
 from frontend.kpi import DeviceKPI
 from frontend.graphs import ViewDevice
-# device_kpi = DeviceKPI()
+from frontend.css import load_css  # Ensure css.py is in the same directory or adjust import accordingly
+
+# Load and apply custom CSS
+custom_css = load_css()
+st.markdown(f"<style>{custom_css}</style>", unsafe_allow_html=True)
+
 content_kpi = ContentKPI()
 views_graph = ViewsTrend()
 device_kpi = DeviceKPI()
