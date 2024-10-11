@@ -1,7 +1,7 @@
 import plotly.express as px
 import streamlit as st 
 # from utils
-from query_database import QueryDatabase
+from backend.query_database import QueryDatabase
 
 class ViewsTrend:
     def __init__(self) -> None:
@@ -19,7 +19,6 @@ class ViewDevice:
         self.df = QueryDatabase("SELECT * FROM marts.device_summary").df
     
     def display_plot(self):
-
         graph_type = st.selectbox("Välj en kpi att visa", options=["Visningar", "Visnings timmar", "Visningslängd genomsnitt"])
         if graph_type == "Visningar":
             fig = px.bar(self.df, x="Enhetstyp", y="Visningar", title="totala visningsar per enhet")

@@ -1,6 +1,6 @@
 import streamlit as st 
-from graphs import ViewOS
-from kpi import OSKPI
+from frontend.graphs import ViewOS
+from frontend.kpi import OSKPI
 os_kpi = OSKPI()
 os_graph = ViewOS()
 def layout():
